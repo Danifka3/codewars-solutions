@@ -1,6 +1,3 @@
-const isSquare = function(n){
-  if (n >= 0 && Number.isInteger(Math.sqrt(n))) return true;
-  else return false;
-}
+const isSquare = (n) => n >= 0 && Number.isInteger(Math.sqrt(n));
 
 console.log(isSquare(25))

@@ -1,4 +1,6 @@
-function realNumbers(n){
+//решить
+
+function realNumbers(n) {
   return Math.round(n*(1 - 0.5 - 1/6 - 0.1))
 }
 console.log(realNumbers(5))

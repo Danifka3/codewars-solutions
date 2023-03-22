@@ -1,12 +1,10 @@
 function myLanguages(results) {
-  const res = [];
-  results = new Map(Object.entries(results));
-  for (let lang of res.keys()) {
-    if  (res.get(lang) >= 60) {
-      res.push(lang);
-    }
-  }
-  return res;
+
+
+  return Object.entries(results).map(([key, value], index) => (value >= 60) ?
+      key : undefined).filter(item => item !== undefined);
 }
+
+//написать это в односрочную функцию с деструктуризацией
 
 console.log(myLanguages({"Java" : 10, "Ruby" : 80, "Python" : 65}))

@@ -1,3 +1,5 @@
+//посмотреть нормальную реализацию
+
 function countIslands(image){
   let counter = 0;
   for (let i = 0; i < image.length; i++) {
