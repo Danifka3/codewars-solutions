@@ -4,8 +4,8 @@ function sortByBit(arr) {
 }
 
 function compareBitsCount(a, b) {
-  let aBitsCount = Array.from(a.toString(2)).reduce((count, item) => (item === '1') ? ++count : count, 0);
-  let bBitsCount = Array.from(b.toString(2)).reduce((count, item) => (item === '1') ? ++count : count, 0);
+  let aBitsCount = Array.from(Number(a).toString(2)).reduce((count, item) => (item === '1') ? ++count : count, 0);
+  let bBitsCount = Array.from(Number(b).toString(2)).reduce((count, item) => (item === '1') ? ++count : count, 0);
   if (aBitsCount > bBitsCount) return 1;
   if (aBitsCount == bBitsCount) {
     if (a > b) return 1;

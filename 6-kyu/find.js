@@ -1,10 +1,7 @@
 function find(object, path) {
   let pathArr = path.split('.');
-  let obj = object;
-  for (let i = 0; i < pathArr.length; i++) {
-    obj = obj?.[pathArr[i]];
-  }
-  return typeof(obj) === 'function' ? undefined : obj;
+  const res = pathArr.reduce((obj, item, i) => obj?.[pathArr[i]], object)
+  return typeof(res) === 'function' ? undefined : res;
 }
 
 let object = {
@@ -13,7 +10,6 @@ let object = {
        first: ['John','Maria'],
        last: 'toString',
        toString(){
-
        }
     }
   }
